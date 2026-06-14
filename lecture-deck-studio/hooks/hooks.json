@@ -1,0 +1,28 @@
+{
+  "description": "Self-improving deck loop: load conventions at session start, capture corrections at session end.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/load-conventions.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Before you finish: scan THIS session for moments where the user corrected your deck work (rewrote a slide, changed an explanation order, fixed tone, removed an em dash, reworked a diagram, or rejected a framing). For each correction, decide if it reveals a DURABLE deck-design preference that is not already captured in ${CLAUDE_PLUGIN_ROOT}/skills/deck-design/deck-conventions.md. If it does, append a single concise bullet to that file under the right heading (Pedagogy, Structure, Voice, Diagrams, or Citations), phrased as a reusable rule, not a one-off. Never invent preferences the user did not signal. If nothing durable came up, do nothing and stay silent. Always honour the standing rule: no em dashes in any output.",
+            "timeout": 60
+          }
+        ]
+      }
+    ]
+  }
+}

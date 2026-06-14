@@ -1,0 +1,12 @@
+{
+  "name": "100x-studio",
+  "description": "100xEngineers studio plugins for building first-principles lecture decks.",
+  "owner": { "name": "100xEngineers" },
+  "plugins": [
+    {
+      "name": "lecture-deck-studio",
+      "source": "./",
+      "description": "Self-improving harness for designing first-principles lecture decks (skills + hooks + MCP)."
+    }
+  ]
+}

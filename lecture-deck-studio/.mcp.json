@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "100x-design-wiki": {
+      "type": "http",
+      "url": "https://100x-design-wiki.cohort-c62.workers.dev/mcp"
+    },
+    "excalidraw": {
+      "type": "http",
+      "url": "https://mcp.excalidraw.com/mcp"
+    }
+  }
+}

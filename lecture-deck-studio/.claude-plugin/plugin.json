@@ -1,0 +1,6 @@
+{
+  "name": "lecture-deck-studio",
+  "version": "0.1.0",
+  "description": "A self-improving Claude Code setup for designing first-principles lecture decks: deck-design and diagram skills, a SessionStart hook that loads your deck conventions, and a Stop hook that watches your corrections and proposes new conventions while the context is fresh.",
+  "author": { "name": "100xEngineers" }
+}
