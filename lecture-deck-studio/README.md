@@ -13,7 +13,7 @@ whole deck setup on day one.
 |-----------|--------------|
 | `skills/deck-design` | First-principles, Socratic, Feynman-style lecture pedagogy plus `deck-conventions.md` (your house style). |
 | `skills/diagram-from-concept` | Maps bracketed visual cues (`[Diagram: ...]`) to animated Excalidraw diagrams via the Excalidraw MCP. |
-| `commands/new-deck.md` | `/new-deck <topic>` scaffolds a deck spine and stops for your sign-off. |
+| `skills/new-deck` | `/new-deck <topic>` scaffolds a deck spine and stops for your sign-off. (Slash commands and skills are unified, so this ships as a skill and is invoked the same way.) |
 | `hooks/hooks.json` | **SessionStart** loads `deck-conventions.md` into context. **Stop** scans the session for corrections you made and appends durable ones back to `deck-conventions.md`. |
 | `.mcp.json` | The `100x-design-wiki` and `excalidraw` HTTP MCP servers. |
 
@@ -51,8 +51,8 @@ claude plugin list          # status should read: enabled
 claude plugin details lecture-deck-studio@100x-studio
 ```
 
-`details` prints the component inventory (3 skills, 2 hooks, 2 MCP servers) and the
-projected token cost.
+`details` prints the component inventory (3 skills including `new-deck`, 2 hooks, 2 MCP
+servers) and the projected token cost.
 
 ### Optional dependency
 Rendered slides are produced by an external slide-rendering skill (for example

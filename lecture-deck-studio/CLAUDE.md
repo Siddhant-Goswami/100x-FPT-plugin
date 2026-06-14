@@ -14,7 +14,7 @@ new collaborator gets your whole deck setup on day one.
   - SessionStart loads `deck-conventions.md` into context so every session knows your style.
   - Stop reviews the corrections you made this session and appends durable ones to `deck-conventions.md`.
 - `.mcp.json` : design-wiki and Excalidraw MCP servers.
-- `commands/new-deck.md` : `/new-deck <topic>` to scaffold a deck spine.
+- `skills/new-deck` : `/new-deck <topic>` to scaffold a deck spine.
 
 ## Optional dependency
 Rendered slides are produced by an external slide-rendering skill (for example
